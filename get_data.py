@@ -1,4 +1,3 @@
-# import http.client
 import sys
 import yaml #pip install pyyaml
 from attrdict import AttrDict
@@ -17,8 +16,7 @@ with open('config.yaml', 'r') as c:
 
 	# Ensure that mandatory values have been provided. Raise exception/print message and stop if not.
 	try:
-		cf.source.leagues and cf.source.API_key in cf
-			
+		cf.source.leagues and cf.source.API_key in cf	
 	except:
 		print "Add data to config.yaml file and come back!"
 		sys.exit()
