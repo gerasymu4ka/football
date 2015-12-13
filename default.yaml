@@ -1,0 +1,5 @@
+source:
+ base_url: http://api.football-data.org/
+database:
+ batch_size: 10  # how much rows will be inserted inside single transaction
+ database_name: football.db
