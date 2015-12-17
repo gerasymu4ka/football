@@ -41,7 +41,7 @@ with open('yamls.txt', 'r') as y:
 	# Build dependecies for further downloads
 	soccerseasons = req_soccerseasons.json()
 	# Your code should not query API if data is already available locally
-	if (os.stat('teams.txt').st_size == 0 and os.stat('leagues.txt').st_size == 0 and os.stat('leagues.txt').st_size == 0):
+	if (os.stat('teams.txt').st_size == 0 and os.stat('leagues.txt').st_size == 0 and os.stat('fixtures.txt').st_size == 0):
 		for s in soccerseasons:
 			#get teams
 			req_teams = requests.get(yam.source.base_url + '{}/teams'.format(s['id']), headers={'X-Auth-Token': yam.source.API_key, 'X-Response-Control': 'minified'})
